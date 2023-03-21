@@ -37,3 +37,13 @@
   color: red;
   font-size: 18px;
 }
+.packed button {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px;
+  background: #fff;
+  color: rgb(9, 179, 179);
+  border-radius: 2px;
+  border: 1.5px solid rgb(19, 219, 219);
+  cursor: pointer;
+}

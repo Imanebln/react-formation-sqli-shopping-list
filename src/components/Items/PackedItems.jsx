@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "./PackedItems.module.css";
 import { AiOutlineDelete } from "react-icons/ai";
 
-function PackedItems({ items, togglePacked, removeItem }) {
+function PackedItems({ items, togglePacked, removeItem, unpackAllItems }) {
   const [searchInput, setSearchInput] = useState("");
   const handleToggle = (index) => {
     togglePacked(index);
@@ -41,6 +41,7 @@ function PackedItems({ items, togglePacked, removeItem }) {
             )
         )}
       </ul>
+      <button onClick={unpackAllItems}>Mark all as unpacked</button>
     </div>
   );
 }

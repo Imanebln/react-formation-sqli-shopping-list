@@ -24,7 +24,18 @@ function ShoppingList() {
     newItems[index].packed = !newItems[index].packed;
     setItems(newItems);
   };
-
+  const unpackAllItems = () => {
+    setItems(items.map((i) => ({ ...i, packed: false })));
+  };
+  const totalPackedItemsPrice = () => {
+    let total = 0;
+    items.forEach((item) => {
+      if (item.packed) {
+        total += item.price;
+      }
+    });
+    return total;
+  };
   return (
     <div className={styles.shopingCart}>
       <div className={styles.container}>
@@ -58,8 +69,18 @@ function ShoppingList() {
             items={items}
             togglePacked={togglePacked}
             removeItem={removeItem}
+            unpackAllItems={unpackAllItems}
           />
         </div>
+        <p>
+          Total Price:{" "}
+          <strong>
+            {items
+              .filter((item) => item.packed === true)
+              .reduce((total, item) => total + item.price, 0)}
+            $
+          </strong>
+        </p>
       </div>
     </div>
   );
