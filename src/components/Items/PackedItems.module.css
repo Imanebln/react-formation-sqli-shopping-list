@@ -1,0 +1,39 @@
+.packed {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.packed input {
+  padding: 8px 16px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+}
+.packed li {
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.packed li .info,
+.packed li .price {
+  display: flex;
+  gap: 8px;
+}
+.packed li p {
+  font-size: 14px;
+  font-weight: 500;
+}
+.packed li button {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 5px;
+  background: none;
+  color: white;
+  border-radius: 2px;
+  border: 0px solid #ccc;
+  cursor: pointer;
+}
+.deleteIcon {
+  color: red;
+  font-size: 18px;
+}
